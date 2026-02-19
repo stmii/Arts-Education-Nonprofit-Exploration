@@ -4,9 +4,8 @@ author: "Steven Todd McIntyre II"
 date: "2026-02-18"
 runtime: shiny
 format: 
-  html: 
-    embed-resources: true
   dashboard:
+    embed-resources: true
     theme: minty
     output:
       orientation: columns
