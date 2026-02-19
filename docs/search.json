@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Exploring Arts Education Nonprofits in the USA",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 18, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 15, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "First Steps: Starting a Visualization Project\n\n\n\n\n\n\n\n\nFeb 15, 2026\n\n\nSteven Todd McIntyre II\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -26,5 +26,19 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/first-post-and-actions/index.html",
+    "href": "posts/first-post-and-actions/index.html",
+    "title": "First Steps: Starting a Visualization Project",
+    "section": "",
+    "text": "This is a poor visualization to test embed-resources."
+  },
+  {
+    "objectID": "posts/first-post-and-actions/index.html#column",
+    "href": "posts/first-post-and-actions/index.html#column",
+    "title": "First Steps: Starting a Visualization Project",
+    "section": "Column",
+    "text": "Column\nThis is the first post in my final project’s Quarto blog, which documents the progress of my Arts Education Nonprofit Exploration digital dashboard. Each post will show iterations on my process.\nWelcome!\nToday, I took the following steps:\n\nI created this blog!\nI cleaned and uploaded data from the Business Master File (BMF), including only data with an A25 (Arts Education) NTEE (National Taxonomy of Exempt Entities) code."
   }
 ]

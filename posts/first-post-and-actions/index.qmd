@@ -1,0 +1,50 @@
+---
+title: "First Steps: Starting a Visualization Project"
+author: "Steven Todd McIntyre II"
+date: "2026-02-15"
+runtime: shiny
+format: 
+  html: 
+    embed-resources: true
+  dashboard:
+    theme: minty
+    output:
+      orientation: columns
+execute:
+  warning: false
+  message: false
+  echo: false
+  
+---
+```{r}
+library(tidyverse)
+library(here)
+library(knitr)
+library(shiny)
+library(rio)
+```
+# Visualization
+This is a poor visualization to test embed-resources.
+```{r}
+a25 <- import(here("data/BMF_A25.csv"))
+
+a25 |>
+  ggplot(aes(ORG_NAME_CURRENT, F990_TOTAL_REVENUE_RECENT)) +
+  geom_col()
+
+```
+
+
+# Summary of Updates
+
+## Column 
+
+This is the first post in my final project's Quarto blog, which documents the progress of my Arts Education Nonprofit Exploration digital dashboard. Each post will show iterations on my process.
+
+Welcome!
+
+Today, I took the following steps:
+
+-   I created this blog!
+-   I cleaned and uploaded data from the [Business Master File (BMF)](https://urbaninstitute.github.io/nccs/datasets/bmf/), including only data with an A25 (Arts Education) NTEE (National Taxonomy of Exempt Entities) code.
+

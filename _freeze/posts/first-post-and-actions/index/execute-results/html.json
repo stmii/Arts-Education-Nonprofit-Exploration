@@ -1,0 +1,17 @@
+{
+  "hash": "97d9fe0d655aabbe467f417e28b13072",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"First Steps: Starting a Visualization Project\"\nauthor: \"Steven Todd McIntyre II\"\ndate: \"2026-02-15\"\nruntime: shiny\nformat: \n  html: \n    embed-resources: true\n  dashboard:\n    theme: minty\n    output:\n      orientation: columns\nexecute:\n  warning: false\n  message: false\n  echo: false\n  \n---\n\n::: {.cell}\n\n:::\n\n# Visualization\nThis is a poor visualization to test embed-resources.\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n\n# Summary of Updates\n\n## Column \n\nThis is the first post in my final project's Quarto blog, which documents the progress of my Arts Education Nonprofit Exploration digital dashboard. Each post will show iterations on my process.\n\nWelcome!\n\nToday, I took the following steps:\n\n-   I created this blog!\n-   I cleaned and uploaded data from the [Business Master File (BMF)](https://urbaninstitute.github.io/nccs/datasets/bmf/), including only data with an A25 (Arts Education) NTEE (National Taxonomy of Exempt Entities) code.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
