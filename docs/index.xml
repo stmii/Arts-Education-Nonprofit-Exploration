@@ -10,7 +10,7 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Final Project for EDLD 652</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Sun, 22 Feb 2026 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 23 Feb 2026 08:00:00 GMT</lastBuildDate>
 <item>
   <title>Bar Graph 1: Landscape of Arts Education Nonprofits</title>
   <dc:creator>Steven Todd McIntyre II</dc:creator>
@@ -52,7 +52,7 @@
 
  ]]></description>
   <guid>https://your-website-url.example.com/posts/a25-word-count/</guid>
-  <pubDate>Sun, 22 Feb 2026 08:00:00 GMT</pubDate>
+  <pubDate>Mon, 23 Feb 2026 08:00:00 GMT</pubDate>
 </item>
 <item>
   <title></title>

@@ -1,7 +1,7 @@
 ---
 title: "Bar Graph 1: Landscape of Arts Education Nonprofits"
 author: "Steven Todd McIntyre II"
-date: "2026-02-22"
+date: "2026-02-23"
 runtime: shiny
 format: 
   dashboard:
@@ -26,6 +26,7 @@ library(rio)
 
 # Visualization
 
+## Column
 
 ```{r}
 a25 <- import(here("data/BMF_A25.csv"))
