@@ -1,7 +1,7 @@
 ---
 title: "Bar Graph 1: Landscape of Arts Education Nonprofits"
 author: "Steven Todd McIntyre II"
-date: "2026-02-23"
+date: "2026-02-25"
 runtime: shiny
 format: 
   dashboard:
@@ -40,9 +40,12 @@ This dashboard will explore United States nonprofit organizations that are coded
 ```{r}
 a25 <- import(here("data/BMF_A25.csv"))
 
-kind_of_org <- c("foundation")
-art_words <- c("arts", "art")
-target_audience <- c("artists", "american", "community", "youth")
+# set categories of top 50 words
+kind_of_org <- c("foundation", "institute", "school", "center", "academy", "association", "guild", "society", "project", "studio", "incorporated", "club", "corporation", "alliance", "productions", "program", "council", "collective", "nfp", "league", "friends")
+art_words <- c("arts", "art", "music", "creative", "fine", "design", "theatre", "performing", "workshop", "graphic", "dance", "traditional", "cultural", "hooking", "theater")
+education_words <- c("education", "learning", "educational")
+locations <- c("american", "community", "international", "county", "valley", "city")
+target_audience <- c("artists", "youth", "kids", "artist", "childrens")
 
 a25_top_50 <- a25 |>
   unnest_tokens(output = word, input = ORG_NAME_CURRENT) |>
@@ -55,13 +58,21 @@ a25_top_50 <- a25 |>
   summarize(n = sum(n)) |>
   mutate(word=fct_reorder(word, n))
 
+a25_top_50 <- a25_top_50 |>
+  mutate(category = case_when(
+    word%in%kind_of_org ~ "organization",
+    word%in%art_words ~ "art",
+    word%in%education_words ~ "education",
+    word%in%locations ~ "location",
+    word%in%target_audience ~ "people"
+  ))
+
 a25_kinds <- a25_top_50 |>
   filter(word%in%kind_of_org)
 
 a25_top_50_plot <- a25_top_50 |>
-  ggplot(aes(n, word)) +
+  ggplot(aes(n, word, fill = category)) +
   geom_col() +
-  geom_col(data = a25_kinds, aes(x = n, y = word), fill = "red") +
   labs(
     title = "Top 50 Words in A25 \"Arts Education\" Organization Names",
     x = "Instances in A25 Organization Names",
@@ -83,10 +94,4 @@ ggplotly(a25_top_50_plot)
 
 Removing the relatively poor visualization that was mostly intended to test embed-resources, I've now added a visualization that will be, in some form, in my final project.
 
-Welcome!
-
-Today, I took the following steps:
-
--   I created this blog!
--   I cleaned and uploaded data from the [Business Master File (BMF)](https://urbaninstitute.github.io/nccs/datasets/bmf/), including only data with an A25 (Arts Education) NTEE (National Taxonomy of Exempt Entities) code.
--   I made a pretty bad visualization in order to test embed-resources
+In this
