@@ -1,7 +1,7 @@
 ---
 title: "Add US Map Plot: Where are Arts Education Nonprofits?"
 author: "Steven Todd McIntyre II"
-date: "2026-02-25"
+date: "2026-03-3"
 runtime: shiny
 format: 
   dashboard:
@@ -23,6 +23,7 @@ library(knitr)
 library(shiny)
 library(rio)
 library(plotly)
+library(usmap)
 
 ```
 
@@ -88,11 +89,20 @@ a25_top_50_plot <- a25_top_50 |>
 ggplotly(a25_top_50_plot)
 ```
 
-# Visualization 2
+# Visualization 2: US Map
 
 ## Column
 
 ```{r}
+a25_state_count <- a25 |>
+  count(F990_ORG_ADDR_STATE) |>
+  mutate(state = F990_ORG_ADDR_STATE) |>
+  select(state, n) |>
+  filter(state != "")
+
+plot_usmap(data = a25_state_count, values = "n") +
+  labs(title = "Where are the A25 Arts Education Nonprofits?") +
+  theme_minimal()
 
 ```
 
@@ -101,7 +111,9 @@ ggplotly(a25_top_50_plot)
 
 ## Column
 
-Removing the relatively poor visualization that was mostly intended to test embed-resources, I've now added a visualization that will be, in some form, in my final project.
+Adding a first pass at a second visualization: a US heatmap of A25 nonprofits. It needs some desparate iteration--it's currently poorly-colored, doesn't particularly tell much of a story, and, like many USA heatmaps, is more of a population heatmap than actually looking at what I'm interested in. Can be changed in future iterations.
 
 In this post, I did the following:
-- 
+- installed the `usmaps` package.
+- got the package to work, counting the number of A25 arts education nonprofits in each state.
+- added a title.
